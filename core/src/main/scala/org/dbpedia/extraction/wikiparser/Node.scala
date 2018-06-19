@@ -229,7 +229,8 @@ private class UriGenerator
 
         val index = uris.getOrElse(uri, 0) + 1
         uris = uris.updated(uri, index)
-        uri + "__" + index.toString
+        // uri + "__" + index.toString
+        baseUri
     }
 
     private def nodeToString(node : Node, sb : mutable.StringBuilder)
